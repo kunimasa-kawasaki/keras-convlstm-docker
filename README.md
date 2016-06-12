@@ -25,6 +25,7 @@ On OSX, change "localhost" to docker host ip:
 ### Sample:
 
 ```
+import numpy as np
 from keras.models import Sequential,Graph
 from keras.layers.convolutional import Convolution2D,Convolution3D
 from keras.layers.recurrent_convolutional import LSTMConv2D
@@ -44,5 +45,5 @@ seq.compile(loss="binary_crossentropy",optimizer="adadelta")
 
 X_train = np.ones((320, 10,40,40,1))
 Y_train = np.ones((320, 10,40,40,1))
-model.fit(X_train, Y_train, batch_size=32, verbose=1)
+seq.fit(X_train, Y_train, batch_size=32, verbose=1)
 ```
