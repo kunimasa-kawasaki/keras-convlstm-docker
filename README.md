@@ -12,7 +12,8 @@ or boot2docker before running this image.
 
 ```bash
 docker build -t keras_convlstm .
-docker run -p 8888:8888 -v $(pwd):/root/host keras_convlstm ipython notebook --ip=0.0.0.0 --no-browser
+docker run -it -p 8888:8888 -v $(pwd):/root/host keras_convlstm  
+ipython notebook --ip=0.0.0.0 --no-browser  
 ```
 
 http://localhost:8888/
